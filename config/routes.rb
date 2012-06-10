@@ -3,6 +3,8 @@ Paydown::Application.routes.draw do
   root to: 'static_pages#home'
   
   resources :users, only: [ :new, :create, :show ]
+  resources :sessions, only: [ :new, :create ]
+  get 'sessions' => 'sessions#destroy', as: :sessions
   
   # The priority is based upon order of creation:
   # first created -> highest priority.
