@@ -3,10 +3,22 @@ body {
 	width:960px;
 	font-family:helvetica neue;
 	header {
+		height:30px;
 		margin:20px 0px;
 		h1 {
 			font-size:30px;
 			font-weight:bold;
+			float:left;
+		}
+		ul {
+			float:right;
+			li {
+				float:left;
+				padding-left:20px;
+				a {
+					text-decoration:none;
+				}
+			}
 		}
 	}
 	.container {
