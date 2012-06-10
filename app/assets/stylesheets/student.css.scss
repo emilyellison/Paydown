@@ -10,10 +10,25 @@ body {
 		}
 	}
 	.container {
-		h1 {
+		h1, h2 {
 			margin:15px 0px;
-			font-size:25px;
 			font-weight:bold;
+		}
+		h1 {
+			font-size:25px;
+		}
+		h2 {
+			font-size:20px;
+		}
+		p {
+			margin:5px 0px;
+		}
+		ul {
+			margin:0px 20px;
+			list-style-type:circle;
+			li {
+				margin:5px 0px;
+			}
 		}
 	}
 }
