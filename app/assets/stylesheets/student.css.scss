@@ -15,6 +15,7 @@ body {
 	header {
 		height:30px;
 		padding:20px 20px;
+		border-bottom:1px solid steelblue;
 		h1 {
 			font-size:30px;
 			font-weight:bold;
@@ -67,6 +68,27 @@ body {
 				padding:5px 10px;
 				color:white;
 				font-weight:bold;
+			}
+		}
+	}
+	footer {
+		border-top:1px solid steelblue;
+		padding:20px 20px;
+		height:15px;
+		font-size:15px;
+		color:steelblue;
+		a {
+			color:steelblue;
+		}
+		p {
+			float:left;
+
+		}
+		ul {
+			float:right;
+			li {
+				float:left;
+				padding-left:20px;
 			}
 		}
 	}

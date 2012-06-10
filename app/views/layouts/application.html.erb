@@ -25,8 +25,15 @@
 				<%= flash[:notice] %>
 			<% end %>
 			<%= yield %>
-			<br/><br/>
 		</div>
+		<br/><br/>
+		<footer>
+			<p class='credit'>&copy; 2012 Gradship</p>
+			<ul>
+				<li><%= link_to 'About', '#' %></li>
+				<li><%= link_to 'Contact Us', '#' %></li>
+			</ul>
+		</footer>
 	</div>
 </body>
 </html>
