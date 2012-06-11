@@ -1,5 +1,7 @@
 class StoriesController < ApplicationController
   
+  before_filter :check_for_logged_in_user
+  
   def new
     @story = Story.new
   end

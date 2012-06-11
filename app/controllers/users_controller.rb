@@ -14,6 +14,7 @@ class UsersController < ApplicationController
   end
   
   def show
+    check_for_logged_in_user
     @user = User.find_by_id(params[:id])
     @education = @user.educations.order('end_year desc')
     @story = @user.story
