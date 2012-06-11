@@ -1,4 +1,12 @@
-<div class='subhead'>
+<div class='story_subhead'>
 	<h2>My Story</h2>
-	<p><%= link_to '+ Add Your Story', new_story_url %><p>
+	<% if @story.nil? %>
+		<p><%= link_to '+ Add Your Story', new_story_url %><p>	
+	<% else %>
+		<p><%= link_to 'Edit Your Story', edit_story_url(@story.id) %></p>
+	<% end %>
 </div>
+<h3>History</h3>
+<p class='profile_paragraph'><%= @story.past %></p>
+<h3>Aspirations</h3>
+<p class='profile_paragraph'><%= @story.future %></p>

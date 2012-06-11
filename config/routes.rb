@@ -6,6 +6,7 @@ Paydown::Application.routes.draw do
   resources :sessions, only: [ :new, :create ]
   get 'sessions' => 'sessions#destroy', as: :sessions
   resources :educations, only: [ :new, :create, :edit, :update, :destroy ]
+  resources :stories, only: [ :new, :create, :edit, :update ]
   
   # The priority is based upon order of creation:
   # first created -> highest priority.

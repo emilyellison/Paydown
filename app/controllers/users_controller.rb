@@ -16,6 +16,7 @@ class UsersController < ApplicationController
   def show
     @user = User.find_by_id(params[:id])
     @education = @user.educations.order('end_year desc')
+    @story = @user.story
   end
   
 end

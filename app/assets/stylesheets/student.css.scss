@@ -92,8 +92,17 @@ body {
 			color:firebrick;
 			margin:15px 0px;
 		}
-		.subhead {
+		.education_subhead {
 			height:35px;
+			h2 {
+				float:left;
+			}
+			p {
+				float:right;
+			}
+		}
+		.story_subhead {
+			height:45px;
 			h2 {
 				float:left;
 			}
@@ -105,6 +114,9 @@ body {
 			font-weight:normal;
 			font-size:15px;
 			padding-left:5px;
+		}
+		.profile_paragraph {
+			width:400px;
 		}
 	}
 	footer {
