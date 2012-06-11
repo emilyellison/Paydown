@@ -43,6 +43,15 @@
 		</ul>
 	<% end %>
 	
+	<% if e.honors.present? %>
+		<p class='honors'>Honors</p>
+		<ul>
+		<% e.honors.split(',').each do |h| %>
+			<li><%= h %></li>
+		<% end %>
+		</ul>
+	<% end %>
+	
 	<% if e.notes.present? %>
 		<p class='notes'>Notes</p>
 		<%= e.notes %>

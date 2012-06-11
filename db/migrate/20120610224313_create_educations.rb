@@ -8,6 +8,7 @@ class CreateEducations < ActiveRecord::Migration
       t.integer :end_year
       t.float :gpa
       t.text :activities
+      t.text :honors
       t.text :notes
       t.integer :user_id
 

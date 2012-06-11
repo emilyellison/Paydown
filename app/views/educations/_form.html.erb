@@ -34,8 +34,12 @@
 											[ '0.25 - 0.50', 0.50 ],
 											[ '0.0 - 0.25', 0.25 ],
 											], include_blank: true %>
-	<%= f.label :activities %>
+	<%= f.label :activities %> 
 	<%= f.text_area :activities, rows: 5 %>
+	<p class='hint'>Separate your activities with commas for best results.</p>
+	<%= f.label :honors %>
+	<%= f.text_area :honors, rows: 5 %>
+	<p class='hint'>Separate your honors with commas for best results.</p>
 	<%= f.label :notes %>
 	<%= f.text_area :notes, rows: 5 %><br/>
 	<%= f.submit 'Add Education', class: 'submit' %>
