@@ -1,8 +1,15 @@
+/* Blue-green
 $lighterblue:#62ced5;
 $lightblue:#58afb7;
 $blue:#44a1a7;
 $darkblue:#0c8194;
 $darkerblue:#066883;
+*/
+$lighterblue:#339cd9;
+$lightblue:#317abf;
+$blue:#2f61a6;
+$darkblue:#29458c;
+$darkerblue:#263173;
 $orange:#d65600;
 $lightorange:#ff7d26;
 html {
@@ -16,7 +23,7 @@ html {
 			border:1px solid $darkerblue;
 			border-radius:8px;
 			box-shadow:3px 4px 4px rgba(0, 0, 0, 0.25);
-			background:white;
+			background:ghostwhite;
 		}
 		a {
 			text-decoration:none;
@@ -76,7 +83,7 @@ html {
 			}
 			img {
 				border-radius:4px;
-				border:1px solid $blue;
+				border:1px solid $lightblue;
 				box-shadow:1px 2px 2px rgba(0, 0, 0, 0.25);
 			}
 			form {
@@ -87,6 +94,8 @@ html {
 				}
 				input, textarea {
 					border-radius:4px;
+					border:1px solid $lighterblue;
+					padding:5px 5px;
 				}
 				.hint {
 					color:grey;
@@ -102,7 +111,7 @@ html {
 				.button {
 					text-align:center;
 					border-radius:8px;
-					border:1px solid $blue;
+					border:1px solid $lightblue;
 					background:-webkit-linear-gradient(top, $lighterblue, $lightblue);
 					text-shadow:$blue 2px 2px;
 				
