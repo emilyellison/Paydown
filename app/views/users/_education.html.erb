@@ -12,13 +12,34 @@
 		</h3>
 	<% end %>
 
-	<% if e.degree.present? && e.study.present? %>
-		<p><%= e.degree %>, <%= e.study %></p>
-	<% elsif e.degree.present? && !e.study.present? %>
-		<p><%= e.degree %></p>
-	<% elsif !e.degree.present? && e.study.present? %>
-		<p><%= e.study %></p>
-	<% else %>
+	<% if e.degree.present? && e.majors.present? %>
+		<p><%= e.degree %> Degree</p>
+	<% end %>
+
+	<% if e.majors.present? %>
+		<% if e.majors.split(',').count > 1 %>
+			<p class='majors'>Majors</p>
+			<ul>
+			<% e.majors.split(',').each do |m| %>
+				<li><%= m %></li>
+			<% end %>
+			</ul>
+		<% else %>
+			<p class='majors'>Major: <%= e.majors.to_s %></p>
+		<% end %>
+	<% end %>
+	
+	<% if e.minors.present? %>
+		<% if e.minors.split(',').count > 1 %>
+			<p class='minors'>Minors</p>
+			<ul>
+			<% e.minors.split(',').each do |m| %>
+				<li><%= m %></li>
+			<% end %>
+			</ul>
+		<% else %>
+			<p class='minors'>Minor: <%= e.minors.to_s %></p>
+		<% end %>
 	<% end %>
 
 	<% if e.start_year.present? && e.end_year.present? %>
