@@ -2,7 +2,7 @@ Paydown::Application.routes.draw do
   
   root to: 'static_pages#home'
   
-  resources :users, only: [ :new, :create, :show ]
+  resources :users, only: [ :new, :create, :show, :edit, :update ]
   resources :sessions, only: [ :new, :create ]
   get 'sessions' => 'sessions#destroy', as: :sessions
   resources :educations, only: [ :new, :create, :edit, :update, :destroy ]

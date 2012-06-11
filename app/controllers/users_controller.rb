@@ -20,4 +20,18 @@ class UsersController < ApplicationController
     @story = @user.story
   end
   
+  def edit
+    @user = User.find_by_id(params[:id])
+  end
+  
+  def update
+    @user = User.find_by_id(params[:id])
+    @user.update_attributes(params[:user])
+    if @user.save
+      redirect_to user_url(@user.id), notice: 'You\'re profile has been updated.'
+    else
+      render :new
+    end
+  end
+  
 end
