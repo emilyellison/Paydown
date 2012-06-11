@@ -1,6 +1,7 @@
 class EducationsController < ApplicationController
   
   before_filter :check_for_logged_in_user
+  before_filter :graduate?
   
   def new
     @education = Education.new
