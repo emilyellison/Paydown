@@ -22,11 +22,12 @@
 		<%= f.label :password_confirmation, 'Confirm Password' %>
 		<%= f.password_field :password_confirmation %>
 	<% end %>
-	<br/>
-	<%= f.label :graduate, class: 'button', id: 'label_user_graduate' %>
-	<%= f.check_box :graduate, style: 'visibility:hidden' %>
-	<%= f.label :benefactor, class: 'button', id: 'label_user_benefactor' %>
-	<%= f.check_box :benefactor, style: 'visibility:hidden' %>	
+	<div class='graduate_benefactor'>
+		<%= f.label :graduate, class: 'button', id: 'label_user_graduate' %>
+		<%= f.check_box :graduate, style: 'visibility:hidden' %>
+		<%= f.label :benefactor, class: 'button', id: 'label_user_benefactor' %>
+		<%= f.check_box :benefactor, style: 'visibility:hidden' %>	
+	</div>
 	<% if @user.new_record? %>	
 		<%= f.submit 'Sign Up', class: 'submit' %>
 	<% else %>

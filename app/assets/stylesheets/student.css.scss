@@ -1,166 +1,183 @@
-body {
-	font-family:"helvetica neue",helvetica,sans-serif;
-	background:steelblue;
-	.container {
-		margin:20px auto;
-		width:960px;
-		border:1px solid darkslategrey;
-		border-radius:8px;
-		box-shadow:3px 4px 4px rgba(0, 0, 0, 0.25);
-		background:white;
-	}
-	a {
-		text-decoration:none;
-	}
-	header {
-		height:30px;
-		padding:20px 20px;
-		border-bottom:2px solid lightsteelblue;
-		h1 {
-			font-size:30px;
-			font-weight:bold;
-			float:left;
+$lighterblue:#62ced5;
+$lightblue:#58afb7;
+$blue:#44a1a7;
+$darkblue:#0c8194;
+$darkerblue:#066883;
+$orange:#d65600;
+$lightorange:#ff7d26;
+html {
+	min-height:100%;
+	body {
+		font-family:"helvetica neue",helvetica,sans-serif;
+		background:-webkit-radial-gradient($darkblue,$darkerblue);
+		.container {
+			margin:20px auto;
+			width:960px;
+			border:1px solid $darkerblue;
+			border-radius:8px;
+			box-shadow:3px 4px 4px rgba(0, 0, 0, 0.25);
+			background:white;
 		}
-		ul {
-			float:right;
-			li {
+		a {
+			text-decoration:none;
+			color:$orange;
+		}
+		header {
+			height:30px;
+			padding:20px 20px;
+			border-bottom:2px solid $lightblue;
+			h1 {
+				font-size:30px;
+				font-weight:bold;
 				float:left;
-				padding-left:20px;
+			}
+			ul {
+				float:right;
+				li {
+					float:left;
+					padding-left:20px;
+				}
 			}
 		}
-	}
-	.content {
-		margin:0px 20px;
-		.notice {
-			margin:20px 0px;
-		}
-		h1, h2, h3 {
-			margin:15px 0px;
-			font-weight:bold;
-		}
-		h1 {
-			font-size:25px;
-		}
-		h2 {
-			font-size:20px;
-		}
-		h3 {
-			font-size:15px;
-			font-weight:bold;
-		}
-		p, ul, a {
-			font-size:15px;
-		}
-		p {
-			margin:5px 0px;
-		}
-		.activities, .notes {
-			font-weight:bold;
-		}
-		ul {
-			margin:0px 0px;
-			list-style-type:circle;
-			li {
-				margin:5px 20px;
+		.content {
+			margin:0px 20px;
+			.notice {
+				margin:20px 0px;
 			}
-		}
-		form {
-			input, label, textarea {
-				display:block;
-				margin:5px 0px;
+			h1, h2, h3 {
+				margin:15px 0px;
+				font-weight:bold;
+			}
+			h1 {
+				font-size:25px;
+			}
+			h2 {
+				font-size:20px;
+			}
+			h3 {
+				font-size:15px;
+				font-weight:bold;
+			}
+			p, ul, a {
 				font-size:15px;
 			}
-			input, textarea {
-				border-radius:4px;
-			}
-			.hint {
-				color:grey;
-				font-size:13px;
-				font-style:italic;
-			}
-			.button {
-				text-align:center;
-				border-radius:8px;
-				border:1px solid steelblue;
-				background:-webkit-linear-gradient(top, lightsteelblue, steelblue);
-				text-shadow:steelblue 2px 2px;
-				width:100px;
-				padding:10px 5px;
-				color:white;
-				font-weight:bold;
-			}
-			.checked {
-				text-align:center;
-				border-radius:8px;
-				border:1px solid darkslategrey;
-				background:-webkit-linear-gradient(top, steelblue, darkslategrey);
-				text-shadow:darkslategrey 2px 2px;
-				width:100px;
-				padding:10px 5px;
-				color:white;
-				font-weight:bold;
-			}
-			.submit {
-				border-radius:8px;
-				border:1px solid firebrick;
-				background:-webkit-linear-gradient(top, red, firebrick);
-				text-shadow:firebrick 2px 2px;
-				padding:10px 10px;
-				color:white;
-				font-weight:bold;
-			}
-		}
-		.errors {
-			color:firebrick;
-			margin:15px 0px;
-		}
-		.education_subhead {
-			height:35px;
-			h2 {
-				float:left;
-			}
 			p {
-				float:right;
+				margin:5px 0px;
+			}
+			.activities, .notes {
+				font-weight:bold;
+			}
+			ul {
+				margin:0px 0px;
+				list-style-type:circle;
+				li {
+					margin:5px 20px;
+				}
+			}
+			form {
+				input, label, textarea {
+					display:block;
+					margin:5px 0px;
+					font-size:15px;
+				}
+				input, textarea {
+					border-radius:4px;
+				}
+				.hint {
+					color:grey;
+					font-size:13px;
+					font-style:italic;
+				}
+				.graduate_benefactor {
+					input, label {
+						display:inline;
+						margin:30px 0px;
+					}
+				}
+				.button {
+					text-align:center;
+					border-radius:8px;
+					border:1px solid $blue;
+					background:-webkit-linear-gradient(top, $lighterblue, $lightblue);
+					text-shadow:$blue 2px 2px;
+				
+					padding:10px 15px;
+					color:white;
+					font-weight:bold;
+				}
+				.checked {
+					text-align:center;
+					border-radius:8px;
+					border:1px solid $darkblue;
+					background:-webkit-linear-gradient(top, $blue, $darkblue);
+					text-shadow:$darkblue 2px 2px;
+				
+					padding:10px 15px;
+					color:white;
+					font-weight:bold;
+				}
+				.submit {
+					border-radius:8px;
+					border:1px solid $orange;
+					background:-webkit-linear-gradient(top, $lightorange, $orange);
+					text-shadow:$orange 2px 2px;
+					padding:10px 15px;
+					color:white;
+					font-weight:bold;
+				}
+			}
+			.errors {
+				color:firebrick;
 				margin:15px 0px;
 			}
-		}
-		.story_subhead {
-			height:40px;
-			h2 {
-				float:left;
+			.education_subhead {
+				height:35px;
+				h2 {
+					float:left;
+				}
+				p {
+					float:right;
+					margin:15px 0px;
+				}
 			}
-			p {
-				float:right;
-				margin:15px 0px;
+			.story_subhead {
+				height:40px;
+				h2 {
+					float:left;
+				}
+				p {
+					float:right;
+					margin:15px 0px;
+				}
+			}
+			.edit_link, .delete_link {
+				font-weight:normal;
+				font-size:15px;
+				padding-left:5px;
+			}
+			.profile_paragraph {
+				width:400px;
 			}
 		}
-		.edit_link, .delete_link {
-			font-weight:normal;
+		footer {
+			border-top:2px solid $lightblue;
+			padding:20px 20px;
+			height:15px;
 			font-size:15px;
-			padding-left:5px;
-		}
-		.profile_paragraph {
-			width:400px;
-		}
-	}
-	footer {
-		border-top:2px solid lightsteelblue;
-		padding:20px 20px;
-		height:15px;
-		font-size:15px;
-		color:steelblue;
-		a {
-			color:steelblue;
-		}
-		p {
-			float:left;
-
-		}
-		ul {
-			float:right;
-			li {
+			color:$lightblue;
+			a {
+				color:$lightblue;
+			}
+			p {
 				float:left;
-				padding-left:20px;
+
+			}
+			ul {
+				float:right;
+				li {
+					float:left;
+					padding-left:20px;
+				}
 			}
 		}
 	}

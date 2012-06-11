@@ -28,7 +28,7 @@ class UsersController < ApplicationController
     @user = User.find_by_id(params[:id])
     @user.update_attributes(params[:user])
     if @user.save
-      redirect_to user_url(@user.id), notice: 'You\'re profile has been updated.'
+      redirect_to user_url(@user.id), notice: 'Your profile has been updated.'
     else
       render :new
     end
