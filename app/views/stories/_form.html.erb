@@ -3,5 +3,9 @@
 	<%= f.text_area :past, rows: 7, placeholder: 'Tell us your story.' %>
 	<%= f.label :future, 'Aspirations' %>
 	<%= f.text_area :future, rows: 7, placeholder: 'What are your goals for the future?' %><br/>
-	<%= f.submit 'Add Your Story', class: 'submit' %>
+	<% if @story.nil? %>
+		<%= f.submit 'Add Your Story', class: 'submit' %>
+	<% else %>
+		<%= f.submit 'Update Your Story', class: 'submit' %>
+	<% end %>
 <% end %>

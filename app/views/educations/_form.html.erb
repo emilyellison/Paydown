@@ -57,5 +57,9 @@
 	<p class='hint'>Separate your honors with commas for best results.</p>
 	<%= f.label :notes %>
 	<%= f.text_area :notes, rows: 5 %><br/>
-	<%= f.submit 'Add Education', class: 'submit' %>
+	<% if @education.nil? %>
+		<%= f.submit 'Add Education', class: 'submit' %>
+	<% else %>
+		<%= f.submit 'Update Education', class: 'submit' %>
+	<% end %>
 <% end %>

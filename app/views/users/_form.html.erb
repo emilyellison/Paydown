@@ -16,9 +16,15 @@
 	<%= f.text_field :last %>
 	<%= f.label :email %>
 	<%= f.text_field :email %>
-	<%= f.label :password %>
-	<%= f.password_field :password %>
-	<%= f.label :password_confirmation, 'Confirm Password' %>
-	<%= f.password_field :password_confirmation %><br/>
-	<%= f.submit 'Sign Up', class: 'submit' %>
+	<% if @user.nil? %>
+		<%= f.label :password %>
+		<%= f.password_field :password %>
+		<%= f.label :password_confirmation, 'Confirm Password' %>
+		<%= f.password_field :password_confirmation %>
+		<br/>
+		<%= f.submit 'Sign Up', class: 'submit' %>
+	<% else %>
+		<br/>
+		<%= f.submit 'Update Profile', class: 'submit' %>
+	<% end %>
 <% end %>
