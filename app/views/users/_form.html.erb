@@ -16,7 +16,7 @@
 	<%= f.text_field :last %>
 	<%= f.label :email %>
 	<%= f.text_field :email %>
-	<% if @user.nil? %>
+	<% if @user.new_record? %>
 		<%= f.label :password %>
 		<%= f.password_field :password %>
 		<%= f.label :password_confirmation, 'Confirm Password' %>
