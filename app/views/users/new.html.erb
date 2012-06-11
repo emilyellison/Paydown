@@ -1,5 +1,16 @@
 <h1>Sign Up</h1>
 
+<% if @user.errors.present? %>
+	<div class='errors'>
+		<p>Whoops! Something went wrong.</p>
+		<ul>
+		<% @user.errors.full_messages.each do |m| %>
+			<li><%= m %>.</li>
+		<% end %>
+		</ul>
+	</div>
+<% end %>
+
 <%= form_for @user do |f| %>
 	<%= f.label :first %>
 	<%= f.text_field :first %>

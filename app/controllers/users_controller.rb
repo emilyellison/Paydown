@@ -15,7 +15,7 @@ class UsersController < ApplicationController
   
   def show
     @user = User.find_by_id(params[:id])
-    @education = @user.educations
+    @education = @user.educations.order('end_year desc')
   end
   
 end
