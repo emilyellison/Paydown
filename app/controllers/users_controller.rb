@@ -7,7 +7,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(params[:user])
     if @user.save
-      redirect_to user_url(@user.id), notice: 'Congrats on signing up for Gradship!'
+      redirect_to new_session_url, notice: 'Congrats on signing up for Gradship!'
     else
       render :new
     end
