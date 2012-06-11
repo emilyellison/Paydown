@@ -21,10 +21,15 @@
 		<%= f.password_field :password %>
 		<%= f.label :password_confirmation, 'Confirm Password' %>
 		<%= f.password_field :password_confirmation %>
-		<br/>
+	<% end %>
+	<br/>
+	<%= f.label :graduate, class: 'button', id: 'label_user_graduate' %>
+	<%= f.check_box :graduate, style: 'visibility:hidden' %>
+	<%= f.label :benefactor, class: 'button', id: 'label_user_benefactor' %>
+	<%= f.check_box :benefactor, style: 'visibility:hidden' %>	
+	<% if @user.new_record? %>	
 		<%= f.submit 'Sign Up', class: 'submit' %>
 	<% else %>
-		<br/>
 		<%= f.submit 'Update Profile', class: 'submit' %>
 	<% end %>
 <% end %>

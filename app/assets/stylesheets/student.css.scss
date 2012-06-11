@@ -80,10 +80,32 @@ body {
 			}
 			.submit {
 				border-radius:8px;
+				border:1px solid firebrick;
+				background:-webkit-linear-gradient(top, red, firebrick);
+				text-shadow:firebrick 2px 2px;
+				padding:10px 10px;
+				color:white;
+				font-weight:bold;
+			}
+			.button {
+				text-align:center;
+				border-radius:8px;
+				border:1px solid dodgerblue;
+				background:-webkit-linear-gradient(top, skyblue, dodgerblue);
+				text-shadow:dodgerblue 2px 2px;
+				width:100px;
+				padding:10px 5px;
+				color:white;
+				font-weight:bold;
+			}
+			.checked {
+				text-align:center;
+				border-radius:8px;
 				border:1px solid royalblue;
-				background:-webkit-linear-gradient(top, steelblue, royalblue);
-				text-shadow:darkgreen 2px 2px;
-				padding:5px 10px;
+				background:-webkit-linear-gradient(top, dodgerblue, royalblue);
+				text-shadow:royalblue 2px 2px;
+				width:100px;
+				padding:10px 5px;
 				color:white;
 				font-weight:bold;
 			}

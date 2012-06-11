@@ -10,4 +10,12 @@ $(document).ready( function() {
 		});
 	});
 	
+	$("#user_graduate").change(function() {
+		 $("#label_user_graduate").toggleClass("checked", this.checked)
+	}).change();
+	
+	$("#user_benefactor").change(function() {
+		 $("#label_user_benefactor").toggleClass("checked", this.checked)
+	}).change();
+
 });
