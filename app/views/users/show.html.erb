@@ -2,6 +2,10 @@
 <%= gravatar_for @user, size: 100 %>
 <br/>
 <br/>
-<%= render 'users/education' %>
+<% if @current_user.graduate == true %>
+	<%= render 'users/education' %>
+<% end %>
 <br/>
-<%= render 'users/story' %>
+<% if @current_user.graduate == true %>
+	<%= render 'users/story' %>
+<% end %>

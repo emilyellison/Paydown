@@ -28,7 +28,7 @@
 			<p class='majors'>Major: <%= e.majors.to_s %></p>
 		<% end %>
 	<% end %>
-	
+
 	<% if e.minors.present? %>
 		<% if e.minors.split(',').count > 1 %>
 			<p class='minors'>Minors</p>
@@ -63,7 +63,7 @@
 		<% end %>
 		</ul>
 	<% end %>
-	
+
 	<% if e.honors.present? %>
 		<p class='honors'>Honors</p>
 		<ul>
@@ -72,10 +72,11 @@
 		<% end %>
 		</ul>
 	<% end %>
-	
+
 	<% if e.notes.present? %>
 		<p class='notes profile_paragraph'>Notes</p>
 		<%= e.notes %>
 	<% end %>	
 
 <% end %>
+
