@@ -1,12 +1,18 @@
 <div class='story_subhead'>
 	<h2>My Story</h2>
 	<% if @story.nil? %>
-		<p><%= link_to '+ Add Your Story', new_story_url %><p>	
+		<p><%= link_to '+ Add Your Story', new_story_url if @current_user.id == params[:id].to_i %><p>	
 	<% else %>
-		<p><%= link_to 'Edit Your Story', edit_story_url(@story.id) %></p>
+		<p><%= link_to 'Edit Your Story', edit_story_url(@story.id) if @current_user.id == params[:id].to_i %></p>
 	<% end %>
 </div>
-<h3>History</h3>
-<p class='profile_paragraph'><%= @story.past %></p>
-<h3>Aspirations</h3>
-<p class='profile_paragraph'><%= @story.future %></p>
+<% if @story.present? %>
+	<% if @story.past? %>
+		<h3>History</h3>
+		<p class='profile_paragraph'><%= @story.past %></p>
+	<% end %>
+	<% if @story.future? %>
+		<h3>Aspirations</h3>
+		<p class='profile_paragraph'><%= @story.future %></p>
+	<% end %>
+<% end %>

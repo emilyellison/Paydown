@@ -1,14 +1,14 @@
 <div class='education_subhead'>
 	<h2>Education</h2>
-	<p><%= link_to '+ Add Education', new_education_url %><p>
+	<p><%= link_to '+ Add Education', new_education_url if @current_user.id == params[:id].to_i %><p>
 </div>
 <% @education.each do |e| %>
 
 	<% if e.school.present? %>
 		<h3>
 			<%= e.school %>
-			<span class='edit_link'><%= link_to 'Edit', edit_education_url(e.id) %></span>
-			<span class='delete_link'><%= link_to 'Delete', education_url(e.id), method: :delete, confirm: 'Sure about that?' %></span>
+			<span class='edit_link'><%= link_to 'Edit', edit_education_url(e.id) if @current_user.id == params[:id].to_i %></span>
+			<span class='delete_link'><%= link_to 'Delete', education_url(e.id), method: :delete, confirm: 'Sure about that?' if @current_user.id == params[:id].to_i %></span>
 		</h3>
 	<% end %>
 
