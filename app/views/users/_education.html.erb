@@ -1,0 +1,51 @@
+<div class='subhead'>
+	<h2>Education</h2>
+	<p><%= link_to '+ Add Education', new_education_url %><p>
+</div>
+<% @education.each do |e| %>
+
+	<% if e.school.present? %>
+		<h3>
+			<%= e.school %>
+			<span class='edit_link'><%= link_to 'Edit', edit_education_url(e.id) %></span>
+			<span class='delete_link'><%= link_to 'Delete', education_url(e.id), method: :delete, confirm: 'Sure about that?' %></span>
+		</h3>
+	<% end %>
+
+	<% if e.degree.present? && e.study.present? %>
+		<p><%= e.degree %>, <%= e.study %></p>
+	<% elsif e.degree.present? && !e.study.present? %>
+		<p><%= e.degree %></p>
+	<% elsif !e.degree.present? && e.study.present? %>
+		<p><%= e.study %></p>
+	<% else %>
+	<% end %>
+
+	<% if e.start_year.present? && e.end_year.present? %>
+		<p><%= e.start_year %> to <%= e.end_year %></p>
+	<% elsif e.start_year.present? && !e.end_year.present? %>
+		<p>Began: <%= e.start_year %></p>
+	<% elsif !e.start_year.present? && e.end_year.present? %>
+		<p>Graduated: <%= e.end_year %></p>
+	<% else %>
+	<% end %>
+
+	<% if e.gpa.present? %>
+		<p>GPA: <%= e.gpa %></p>
+	<% end %>
+
+	<% if e.activities.present? %>
+		<p class='activities'>Activities</p>
+		<ul>
+		<% e.activities.split(',').each do |a| %>
+			<li><%= a %></li>
+		<% end %>
+		</ul>
+	<% end %>
+	
+	<% if e.notes.present? %>
+		<p class='notes'>Notes</p>
+		<%= e.notes %>
+	<% end %>	
+
+<% end %>

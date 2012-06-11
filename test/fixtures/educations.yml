@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  school: MyString
+  degree: MyString
+  field: MyString
+  start_year: 1
+  end_year: 1
+  gpa: 1.5
+  activities: MyText
+  notes: MyText
+
+two:
+  school: MyString
+  degree: MyString
+  field: MyString
+  start_year: 1
+  end_year: 1
+  gpa: 1.5
+  activities: MyText
+  notes: MyText

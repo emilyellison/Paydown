@@ -1,0 +1,42 @@
+<%= form_for @education do |f| %>
+	<%= f.label :school %>
+	<%= f.text_field :school %>
+	<%= f.label :degree %>
+	<%= f.select :degree, [
+												[ 'Associate\'s' ],
+												[ 'Bachelor\'s' ],
+												[ 'Master\'s' ],
+												[ 'PhD' ] 
+												], include_blank: true %>
+	<%= f.label :study %>
+	<%= f.text_field :study %>
+	<%= f.label :start_year %>
+	<%= f.select :start_year, (1900..2012).to_a.sort_by { |h| -h }, include_blank: true %>		
+	<%= f.label :end_year %>
+	<%= f.select :end_year, (1900..2012).to_a.sort_by { |h| -h }, include_blank: true %>
+	<%= f.label :gpa, 'GPA' %>
+	<%= f.select :gpa, 	[ 
+											[ '4.0 +', 4.25 ],
+											[ '3.75 - 4.0', 4.0 ],
+											[ '3.50 - 3.75', 3.75 ],
+											[ '3.25 - 3.50', 3.50 ],
+											[ '3.0 - 3.25', 3.25 ],
+											[ '2.75 - 3.0', 3.0 ],
+											[ '2.50 - 2.75', 2.75 ],
+											[ '2.25 - 2.50', 2.50 ],
+											[ '2.0 - 2.25', 2.25 ],
+											[ '1.75 - 2.0', 2.0 ],
+											[ '1.50 - 1.75', 1.75 ],
+											[ '1.25 - 1.50', 1.50 ],
+											[ '1.0 - 1.25', 1.25 ],
+											[ '0.75 - 1.0', 1.0 ],
+											[ '0.50 - 0.75', 0.75 ],
+											[ '0.25 - 0.50', 0.50 ],
+											[ '0.0 - 0.25', 0.25 ],
+											], include_blank: true %>
+	<%= f.label :activities %>
+	<%= f.text_area :activities, rows: 5 %>
+	<%= f.label :notes %>
+	<%= f.text_area :notes, rows: 5 %><br/>
+	<%= f.submit 'Add Education', class: 'submit' %>
+<% end %>

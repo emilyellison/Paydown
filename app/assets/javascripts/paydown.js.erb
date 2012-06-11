@@ -1,0 +1,13 @@
+$(document).ready( function() {
+
+	// Autocomplete the location when someone types in a bar.
+
+	$(function() {
+		var institutions = <%= Institution.all.collect(&:name).uniq.sort.to_json.html_safe %>;
+		$( "#education_school" ).autocomplete({
+			source: institutions,
+			delay: 0
+		});
+	});
+	
+});

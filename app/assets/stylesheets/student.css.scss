@@ -34,7 +34,7 @@ body {
 		.notice {
 			margin:20px 0px;
 		}
-		h1, h2 {
+		h1, h2, h3 {
 			margin:15px 0px;
 			font-weight:bold;
 		}
@@ -44,11 +44,18 @@ body {
 		h2 {
 			font-size:20px;
 		}
+		h3 {
+			font-size:15px;
+			font-weight:bold;
+		}
 		p, ul, a {
 			font-size:15px;
 		}
 		p {
 			margin:5px 0px;
+		}
+		.activities, .notes {
+			font-weight:bold;
 		}
 		ul {
 			margin:0px 0px;
@@ -58,20 +65,37 @@ body {
 			}
 		}
 		form {
-			input, label {
+			input, label, textarea {
 				display:block;
 				margin:5px 0px;
 				font-size:15px;
 			}
+			input, textarea {
+				border-radius:4px;
+			}
 			.submit {
 				border-radius:8px;
-				border:1px solid darkgreen;
-				background:-webkit-linear-gradient(top, green, darkgreen);
+				border:1px solid royalblue;
+				background:-webkit-linear-gradient(top, steelblue, royalblue);
 				text-shadow:darkgreen 2px 2px;
 				padding:5px 10px;
 				color:white;
 				font-weight:bold;
 			}
+		}
+		.subhead {
+			height:35px;
+			h2 {
+				float:left;
+			}
+			p {
+				float:right;
+			}
+		}
+		.edit_link, .delete_link {
+			font-weight:normal;
+			font-size:15px;
+			padding-left:5px;
 		}
 	}
 	footer {
