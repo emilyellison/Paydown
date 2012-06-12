@@ -1,5 +1,7 @@
 class UsersController < ApplicationController
   
+  before_filter :already_logged_in, only: [ :new, :create ]
+  
   def new
     @user = User.new
   end

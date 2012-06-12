@@ -13,6 +13,13 @@ class ApplicationController < ActionController::Base
     end
   end
   
+  def already_logged_in
+    if @current_user.present?
+      redirect_to root_url
+      flash[:notice] = 'You\'re already logged in. You must sign out to sign up a new account.'
+    end
+  end
+  
   def graduate?
     if @current_user && @current_user.graduate == false
       redirect_to user_url(@current_user.id), notice: 'You are not authorized to view this page.'

@@ -172,6 +172,12 @@ html {
 			.profile_paragraph {
 				width:400px;
 			}
+			#sign_up_request {
+				font-size:18px;
+				a {
+					font-size:18px;
+				}
+			}
 		}
 		footer {
 			border-top:2px solid $lightblue;
@@ -180,7 +186,7 @@ html {
 			font-size:15px;
 			color:$lightblue;
 			a {
-				color:$lightblue;
+				color:$orange;
 			}
 			p {
 				float:left;
